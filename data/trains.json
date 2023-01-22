@@ -4,13 +4,13 @@
 			"name": "Hogwarts Express",
 			"stops": [
 				{
-					"station": "Sycamore-Joy",
+					"station": "Sycamore",
 					"status": "ON-TIME",
 					"arrival": "14:00pm",
 					"departure": "15:10pm"
 				},
 				{
-					"station": "Pine-Joy",
+					"station": "Pine",
 					"status": "ON-TIME",
 					"arrival": "1:00pm",
 					"departure": "1:10pm"
