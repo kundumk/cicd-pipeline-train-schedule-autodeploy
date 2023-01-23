@@ -18,9 +18,9 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build(DOCKER_IMAGE_NAME)
+                    app = docker.build($DOCKER_IMAGE_NAME)
                     app.inside {
-                        sh 'docker build -t DOCKER_IMAGE_NAME:latest .'
+                        sh 'docker build -t $DOCKER_IMAGE_NAME:latest .'
                     }
                 }
             }
