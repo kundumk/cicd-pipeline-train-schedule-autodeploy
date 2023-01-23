@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        //be sure to replace "kundumk" with your own Docker Hub username
-        DOCKER_IMAGE_NAME = "kundumk/train-schedule"
+        //be sure to replace "bhavukm" with your own Docker Hub username
+        DOCKER_IMAGE_NAME = "bhavukm/train-schedule"
     }
     stages {
         stage('Build') {
@@ -18,9 +18,9 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build($DOCKER_IMAGE_NAME)
+                    app = docker.build(DOCKER_IMAGE_NAME)
                     app.inside {
-                        sh 'docker build -t $DOCKER_IMAGE_NAME:latest .'
+                        sh 'echo Hello, World!'
                     }
                 }
             }
