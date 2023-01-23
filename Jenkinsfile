@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
-                sudo chown -R $USER:$(id -gn $USER) /home/edureka/.config
+                sudo chown -R edureka:edureka /home/edureka/.config
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
