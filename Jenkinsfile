@@ -6,6 +6,7 @@ pipeline {
     }
     stages {
         stage('Build') {
+            agent { label 'slave1' }
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
