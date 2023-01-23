@@ -10,8 +10,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
-                sudo chown -R edureka:edureka /home/edureka/.config
-                archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+                        archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
         stage('Build Docker Image') {
